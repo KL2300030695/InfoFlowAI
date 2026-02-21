@@ -16,6 +16,7 @@ import {
 import { Avatar, AvatarFallback } from './ui/avatar';
 import { LogOut, User, LayoutDashboard } from 'lucide-react';
 import { Skeleton } from './ui/skeleton';
+import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
   const { user, isUserLoading } = useUser();
@@ -95,7 +96,10 @@ export function Header() {
           </h1>
         </Link>
       </div>
-      {renderAuthButtons()}
+      <div className="flex items-center gap-1">
+        <ThemeToggle />
+        {renderAuthButtons()}
+      </div>
     </header>
   );
 }

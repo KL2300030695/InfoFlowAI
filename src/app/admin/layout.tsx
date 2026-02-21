@@ -18,6 +18,7 @@ import { LogoIcon } from '@/components/icons';
 import { AuthGuard } from '@/components/auth/auth-guard';
 import { UserNav } from '@/components/auth/user-nav';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function AdminLayout({
   children,
@@ -74,6 +75,7 @@ export default function AdminLayout({
             <div className="w-full flex-1">
               {/* Can add breadcrumbs or other header content here */}
             </div>
+            <ThemeToggle />
             <UserNav />
           </header>
           <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
